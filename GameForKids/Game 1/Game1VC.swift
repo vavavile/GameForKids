@@ -9,8 +9,6 @@
 import UIKit
 
 class Game1VC: UIViewController {
-    
-    
     @IBOutlet weak var backBtn: UIButton!
     
     override func viewDidLoad() {
@@ -19,9 +17,10 @@ class Game1VC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
     @IBAction func backBtnAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
+    }
 }

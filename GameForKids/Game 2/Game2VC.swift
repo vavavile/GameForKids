@@ -10,7 +10,7 @@ import UIKit
 
 class Game2VC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,5 +19,9 @@ class Game2VC: UIViewController {
     
     @IBAction func backBtnAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
     }
 }

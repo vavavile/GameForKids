@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var itemCollectionView: UICollectionView!
     
     var games = [Game]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +29,10 @@ class HomeViewController: UIViewController {
         itemCollectionView.delegate = self
         itemCollectionView.dataSource = self
         itemCollectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
-        
+    }
+    
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
     }
     
     private func initData(){
@@ -47,6 +49,7 @@ class HomeViewController: UIViewController {
 
 }
 
+//MARK: - UIcollection view delegate and datasource
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return games.count
