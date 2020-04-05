@@ -14,6 +14,10 @@
 		0C674D74243A2DA700A00754 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C674D73243A2DA700A00754 /* HomeViewController.swift */; };
 		0C674D78243A321300A00754 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C674D76243A321300A00754 /* ItemCell.swift */; };
 		0C674D79243A321300A00754 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C674D77243A321300A00754 /* ItemCell.xib */; };
+		0C674D7E243A3E3800A00754 /* Game1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C674D7C243A3E3800A00754 /* Game1VC.swift */; };
+		0C674D7F243A3E3800A00754 /* Game1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C674D7D243A3E3800A00754 /* Game1VC.xib */; };
+		0C674D82243A3E8700A00754 /* Game2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C674D80243A3E8700A00754 /* Game2VC.swift */; };
+		0C674D83243A3E8700A00754 /* Game2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C674D81243A3E8700A00754 /* Game2VC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		0C674D73243A2DA700A00754 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0C674D76243A321300A00754 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		0C674D77243A321300A00754 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		0C674D7C243A3E3800A00754 /* Game1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1VC.swift; sourceTree = "<group>"; };
+		0C674D7D243A3E3800A00754 /* Game1VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Game1VC.xib; sourceTree = "<group>"; };
+		0C674D80243A3E8700A00754 /* Game2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2VC.swift; sourceTree = "<group>"; };
+		0C674D81243A3E8700A00754 /* Game2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Game2VC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,8 @@
 		0C674D5F243A2C9100A00754 /* GameForKids */ = {
 			isa = PBXGroup;
 			children = (
+				0C674D7B243A3E1900A00754 /* Game 2 */,
+				0C674D7A243A3E0F00A00754 /* Game 1 */,
 				0C674D72243A2D8F00A00754 /* HomeView */,
 				0C674D60243A2C9100A00754 /* AppDelegate.swift */,
 				0C674D64243A2C9100A00754 /* Main.storyboard */,
@@ -84,6 +94,24 @@
 				0C674D77243A321300A00754 /* ItemCell.xib */,
 			);
 			path = "Collection view cell";
+			sourceTree = "<group>";
+		};
+		0C674D7A243A3E0F00A00754 /* Game 1 */ = {
+			isa = PBXGroup;
+			children = (
+				0C674D7C243A3E3800A00754 /* Game1VC.swift */,
+				0C674D7D243A3E3800A00754 /* Game1VC.xib */,
+			);
+			path = "Game 1";
+			sourceTree = "<group>";
+		};
+		0C674D7B243A3E1900A00754 /* Game 2 */ = {
+			isa = PBXGroup;
+			children = (
+				0C674D80243A3E8700A00754 /* Game2VC.swift */,
+				0C674D81243A3E8700A00754 /* Game2VC.xib */,
+			);
+			path = "Game 2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +175,9 @@
 				0C674D79243A321300A00754 /* ItemCell.xib in Resources */,
 				0C674D6B243A2C9500A00754 /* LaunchScreen.storyboard in Resources */,
 				0C674D68243A2C9500A00754 /* Assets.xcassets in Resources */,
+				0C674D7F243A3E3800A00754 /* Game1VC.xib in Resources */,
 				0C674D66243A2C9100A00754 /* Main.storyboard in Resources */,
+				0C674D83243A3E8700A00754 /* Game2VC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +188,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C674D7E243A3E3800A00754 /* Game1VC.swift in Sources */,
+				0C674D82243A3E8700A00754 /* Game2VC.swift in Sources */,
 				0C674D61243A2C9100A00754 /* AppDelegate.swift in Sources */,
 				0C674D74243A2DA700A00754 /* HomeViewController.swift in Sources */,
 				0C674D78243A321300A00754 /* ItemCell.swift in Sources */,

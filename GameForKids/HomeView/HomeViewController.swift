@@ -9,17 +9,19 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    
     @IBOutlet weak var itemCollectionView: UICollectionView!
     
     var games = [Game]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initiateView()
         initData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     private func initiateView() {
@@ -57,7 +59,22 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 200)
+        return CGSize(width: 200, height: 250)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5.0
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let game1 = Game1VC(nibName: "Game1VC", bundle: nil)
+            self.navigationController?.pushViewController(game1, animated: true)
+        case 1:
+            let game2 = Game2VC(nibName: "Game2VC", bundle: nil)
+            self.navigationController?.pushViewController(game2, animated: true)
+        default:
+            return
+        }
     }
 }
 
