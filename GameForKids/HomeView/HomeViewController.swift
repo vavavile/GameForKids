@@ -29,11 +29,19 @@ class HomeViewController: UIViewController {
         itemCollectionView.delegate = self
         itemCollectionView.dataSource = self
         itemCollectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
+        
+        let value = UIInterfaceOrientation.landscapeLeft.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     override var prefersHomeIndicatorAutoHidden: Bool {
         return true
     }
+    
+    override var shouldAutorotate: Bool {
+        return true
+    }
+
     
     private func initData(){
         var game1 = Game()
