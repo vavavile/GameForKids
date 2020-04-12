@@ -43,6 +43,7 @@ extension Game1VC: UICollectionViewDelegate, UICollectionViewDataSource,UICollec
         case 12:
             cell.inputTf.isHidden = false
             cell.numberLb.isHidden = true
+            
         case 34:
             cell.inputTf.isHidden = false
             cell.numberLb.isHidden = true
@@ -60,6 +61,7 @@ extension Game1VC: UICollectionViewDelegate, UICollectionViewDataSource,UICollec
             cell.numberLb.isHidden = false
             cell.numberLb.text = "\(indexPath.row + 1)"
         }
+        cell.mainView = self
         return cell
     }
     

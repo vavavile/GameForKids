@@ -9,9 +9,12 @@
 import UIKit
 
 class Game1ItemCell: UICollectionViewCell {
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var inputTf: UITextField!
     @IBOutlet weak var numberLb: UILabel!
+    
+    var mainView:UIViewController!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +26,8 @@ class Game1ItemCell: UICollectionViewCell {
         inputTf.layer.borderWidth = 4.5
         inputTf.layer.cornerRadius = 10
         
+        inputTf.delegate = self
+        setupTextFields()
     }
 
 }
@@ -41,5 +46,26 @@ extension UIColor {
             green: (rgb >> 8) & 0xFF,
             blue: rgb & 0xFF
         )
+    }
+}
+
+extension Game1ItemCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        print("jajajajajjj")
+        return true
+    }
+    
+    func setupTextFields() {
+        let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: UIScreen.main.bounds.width, height: 30)))
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneBtn = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        toolbar.setItems([flexSpace, doneBtn], animated: false)
+        toolbar.sizeToFit()
+        inputTf.inputAccessoryView = toolbar
+    }
+    @objc func doneButtonAction(){
+        self.endEditing(true)
     }
 }
