@@ -33,13 +33,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete the chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA7-X2-bMU">
-                    <rect key="frame" x="362" y="10" width="172" height="24"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <rect key="frame" x="335.5" y="10" width="225" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6XY-Tq-Zbi">
-                    <rect key="frame" x="40" y="84" width="816" height="309"/>
+                    <rect key="frame" x="40" y="90" width="816" height="303"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HSd-uU-AD3">
                         <size key="itemSize" width="50" height="50"/>
@@ -49,9 +49,23 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roof" translatesAutoresizingMaskIntoConstraints="NO" id="ilf-aY-u2O">
-                    <rect key="frame" x="20" y="44" width="856" height="40"/>
+                    <rect key="frame" x="20" y="50" width="856" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="4c4-fD-nZ2"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_45_5027839" translatesAutoresizingMaskIntoConstraints="NO" id="LFS-Vp-E90">
+                    <rect key="frame" x="287" y="5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="4Ha-x6-Hdh"/>
+                        <constraint firstAttribute="height" constant="40" id="WCE-Yh-yQx"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder___flower_heart_seduce_5740694" translatesAutoresizingMaskIntoConstraints="NO" id="ohU-dH-rbK">
+                    <rect key="frame" x="578" y="5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="gR2-b0-Nsw"/>
+                        <constraint firstAttribute="width" constant="40" id="gmr-E9-IXQ"/>
                     </constraints>
                 </imageView>
             </subviews>
@@ -59,11 +73,15 @@
             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6XY-Tq-Zbi" secondAttribute="bottom" id="6JC-Za-G73"/>
+                <constraint firstItem="ohU-dH-rbK" firstAttribute="leading" secondItem="IA7-X2-bMU" secondAttribute="trailing" constant="17.5" id="9LD-dP-iqk"/>
                 <constraint firstItem="6XY-Tq-Zbi" firstAttribute="top" secondItem="ilf-aY-u2O" secondAttribute="bottom" id="Bp4-vv-xBK"/>
                 <constraint firstItem="ilf-aY-u2O" firstAttribute="trailing" secondItem="6XY-Tq-Zbi" secondAttribute="trailing" constant="20" id="FRW-Um-TWD"/>
                 <constraint firstItem="IA7-X2-bMU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="PLj-Ip-DNV"/>
+                <constraint firstItem="LFS-Vp-E90" firstAttribute="centerY" secondItem="IA7-X2-bMU" secondAttribute="centerY" id="Pdz-zV-55a"/>
                 <constraint firstAttribute="trailing" secondItem="6XY-Tq-Zbi" secondAttribute="trailing" constant="40" id="QLE-ZO-95E"/>
+                <constraint firstItem="ohU-dH-rbK" firstAttribute="centerY" secondItem="IA7-X2-bMU" secondAttribute="centerY" id="aAL-yH-1O7"/>
                 <constraint firstItem="C4S-1n-MPa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="duU-74-nOZ"/>
+                <constraint firstItem="IA7-X2-bMU" firstAttribute="leading" secondItem="LFS-Vp-E90" secondAttribute="trailing" constant="8.5" id="h1p-jW-9jJ"/>
                 <constraint firstItem="IA7-X2-bMU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ii4-ee-80J"/>
                 <constraint firstItem="6XY-Tq-Zbi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="l4p-MO-9zV"/>
                 <constraint firstItem="C4S-1n-MPa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="s3J-OD-DnQ"/>
@@ -72,10 +90,12 @@
                 <constraint firstItem="6XY-Tq-Zbi" firstAttribute="top" secondItem="IA7-X2-bMU" secondAttribute="bottom" constant="50" id="wSP-yN-M6H"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="150.66964285714286" y="-50.724637681159422"/>
+            <point key="canvasLocation" x="54.910714285714285" y="-107.24637681159422"/>
         </view>
     </objects>
     <resources>
+        <image name="iconfinder_45_5027839" width="64" height="64"/>
+        <image name="iconfinder___flower_heart_seduce_5740694" width="16" height="16"/>
         <image name="roof" width="781" height="30"/>
     </resources>
 </document>

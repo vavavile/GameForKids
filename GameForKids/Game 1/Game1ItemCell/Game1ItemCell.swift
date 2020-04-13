@@ -14,7 +14,9 @@ class Game1ItemCell: UICollectionViewCell {
     @IBOutlet weak var inputTf: UITextField!
     @IBOutlet weak var numberLb: UILabel!
     
-    var mainView:UIViewController!
+    var correctNumber = -1
+    var mainView:UIViewController?
+    var checkAnswer:(() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,20 +54,26 @@ extension UIColor {
 extension Game1ItemCell: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        print("jajajajajjj")
         return true
     }
     
     func setupTextFields() {
         let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: UIScreen.main.bounds.width, height: 30)))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneBtn = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        let doneBtn = UIBarButtonItem(title: "Check answer", style: .done, target: self, action: #selector(doneButtonAction))
         
         toolbar.setItems([flexSpace, doneBtn], animated: false)
         toolbar.sizeToFit()
         inputTf.inputAccessoryView = toolbar
     }
+    
     @objc func doneButtonAction(){
         self.endEditing(true)
+        if let checkAnswer = checkAnswer {
+            checkAnswer()
+        }
+    
     }
+    
+    
 }
