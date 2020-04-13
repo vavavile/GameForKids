@@ -28,6 +28,7 @@ class Game1VC: UIViewController {
         collectionView.register(UINib(nibName: "Game1ItemCell", bundle: nil), forCellWithReuseIdentifier: "Game1ItemCell")
         
         containerView.layer.cornerRadius = 20
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -53,8 +54,6 @@ extension Game1VC: UICollectionViewDelegate, UICollectionViewDataSource,UICollec
         switch currentNumber {
         case 12:
             mysteriousNumber(cell: cell, hideInputTf: false, hideNumberLb: true, number: 12)
-            cell.inputTf.isHidden = false
-            cell.numberLb.isHidden = true
             
         case 34:
             mysteriousNumber(cell: cell, hideInputTf: false, hideNumberLb: true, number: 34)
@@ -69,7 +68,6 @@ extension Game1VC: UICollectionViewDelegate, UICollectionViewDataSource,UICollec
             mysteriousNumber(cell: cell, hideInputTf: true, hideNumberLb: false, number: -1)
             cell.numberLb.text = "\(indexPath.row + 1)"
         }
-        cell.mainView = self
         return cell
     }
     

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartScreenVC" customModule="GameForKids" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startScreen" translatesAutoresizingMaskIntoConstraints="NO" id="nsE-uA-oOq">
+                    <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VM-br-mRA">
+                    <rect key="frame" x="323" y="82" width="250" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="Xbx-CZ-btT"/>
+                        <constraint firstAttribute="width" constant="250" id="x97-gw-FZe"/>
+                    </constraints>
+                    <connections>
+                        <action selector="startBtn:" destination="-1" eventType="touchUpInside" id="CDb-OB-ljr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8VM-br-mRA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="33Z-8w-9sg"/>
+                <constraint firstAttribute="trailing" secondItem="nsE-uA-oOq" secondAttribute="trailing" id="3JV-hD-nkK"/>
+                <constraint firstItem="nsE-uA-oOq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="D6B-wV-kgm"/>
+                <constraint firstItem="8VM-br-mRA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Oxk-TT-R4m"/>
+                <constraint firstAttribute="bottom" secondItem="nsE-uA-oOq" secondAttribute="bottom" id="eC6-NN-FIR"/>
+                <constraint firstItem="nsE-uA-oOq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="w2E-MQ-nKj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="133.92857142857142" y="142.02898550724638"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="startScreen" width="952" height="466"/>
+    </resources>
+</document>

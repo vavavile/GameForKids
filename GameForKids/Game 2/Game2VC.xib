@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Game2VC" customModule="GameForKids" customModuleProvider="target">
             <connections>
                 <outlet property="backBtn" destination="ExB-8f-bJG" id="Rzj-Er-NPz"/>
+                <outlet property="collectionView" destination="5uf-ti-vSn" id="yUu-0y-fkP"/>
                 <outlet property="containerView" destination="oYc-to-VZV" id="Nq9-u9-AgC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,11 +39,27 @@
                                 <action selector="backBtnAction:" destination="-1" eventType="touchUpInside" id="yNe-EE-Xp5"/>
                             </connections>
                         </button>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5uf-ti-vSn">
+                            <rect key="frame" x="10" y="63" width="768" height="100"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="atm-f3-ydm"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ktt-bh-Ftr">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="ExB-8f-bJG" firstAttribute="leading" secondItem="akD-Mt-3Ew" secondAttribute="leading" constant="8" id="5sK-bR-mtK"/>
                         <constraint firstItem="ExB-8f-bJG" firstAttribute="top" secondItem="akD-Mt-3Ew" secondAttribute="top" constant="8" id="APK-SZ-6mb"/>
+                        <constraint firstItem="5uf-ti-vSn" firstAttribute="top" secondItem="ExB-8f-bJG" secondAttribute="bottom" constant="20" id="EwS-F3-U3c"/>
+                        <constraint firstItem="akD-Mt-3Ew" firstAttribute="trailing" secondItem="5uf-ti-vSn" secondAttribute="trailing" constant="10" id="XdS-5d-WS2"/>
+                        <constraint firstItem="5uf-ti-vSn" firstAttribute="leading" secondItem="akD-Mt-3Ew" secondAttribute="leading" constant="10" id="udX-07-NZz"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="akD-Mt-3Ew"/>
                 </view>

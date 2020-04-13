@@ -10,6 +10,10 @@
 		0C24FD262443652E002C34C5 /* Game1ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C24FD242443652E002C34C5 /* Game1ItemCell.swift */; };
 		0C24FD272443652E002C34C5 /* Game1ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C24FD252443652E002C34C5 /* Game1ItemCell.xib */; };
 		0C4E0A46244462B8000ED248 /* SupportFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E0A45244462B8000ED248 /* SupportFile.swift */; };
+		0C4E0A4A2444C4E4000ED248 /* Game2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E0A482444C4E3000ED248 /* Game2Cell.swift */; };
+		0C4E0A4B2444C4E4000ED248 /* Game2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4E0A492444C4E3000ED248 /* Game2Cell.xib */; };
+		0C4E0A4E2444CF6F000ED248 /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E0A4C2444CF6F000ED248 /* StartScreenVC.swift */; };
+		0C4E0A4F2444CF6F000ED248 /* StartScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4E0A4D2444CF6F000ED248 /* StartScreenVC.xib */; };
 		0C674D61243A2C9100A00754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C674D60243A2C9100A00754 /* AppDelegate.swift */; };
 		0C674D66243A2C9100A00754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C674D64243A2C9100A00754 /* Main.storyboard */; };
 		0C674D68243A2C9500A00754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C674D67243A2C9500A00754 /* Assets.xcassets */; };
@@ -27,6 +31,10 @@
 		0C24FD242443652E002C34C5 /* Game1ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1ItemCell.swift; sourceTree = "<group>"; };
 		0C24FD252443652E002C34C5 /* Game1ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Game1ItemCell.xib; sourceTree = "<group>"; };
 		0C4E0A45244462B8000ED248 /* SupportFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportFile.swift; sourceTree = "<group>"; };
+		0C4E0A482444C4E3000ED248 /* Game2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2Cell.swift; sourceTree = "<group>"; };
+		0C4E0A492444C4E3000ED248 /* Game2Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Game2Cell.xib; sourceTree = "<group>"; };
+		0C4E0A4C2444CF6F000ED248 /* StartScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
+		0C4E0A4D2444CF6F000ED248 /* StartScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartScreenVC.xib; sourceTree = "<group>"; };
 		0C674D5D243A2C9100A00754 /* GameForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C674D60243A2C9100A00754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C674D65243A2C9100A00754 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +76,15 @@
 				0C4E0A45244462B8000ED248 /* SupportFile.swift */,
 			);
 			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		0C4E0A472444C4CB000ED248 /* Game 2 view cell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4E0A482444C4E3000ED248 /* Game2Cell.swift */,
+				0C4E0A492444C4E3000ED248 /* Game2Cell.xib */,
+			);
+			path = "Game 2 view cell";
 			sourceTree = "<group>";
 		};
 		0C674D54243A2C9100A00754 = {
@@ -133,8 +150,11 @@
 		0C674D7B243A3E1900A00754 /* Game 2 */ = {
 			isa = PBXGroup;
 			children = (
+				0C4E0A472444C4CB000ED248 /* Game 2 view cell */,
 				0C674D80243A3E8700A00754 /* Game2VC.swift */,
 				0C674D81243A3E8700A00754 /* Game2VC.xib */,
+				0C4E0A4C2444CF6F000ED248 /* StartScreenVC.swift */,
+				0C4E0A4D2444CF6F000ED248 /* StartScreenVC.xib */,
 			);
 			path = "Game 2";
 			sourceTree = "<group>";
@@ -199,6 +219,8 @@
 			files = (
 				0C674D79243A321300A00754 /* ItemCell.xib in Resources */,
 				0C674D6B243A2C9500A00754 /* LaunchScreen.storyboard in Resources */,
+				0C4E0A4F2444CF6F000ED248 /* StartScreenVC.xib in Resources */,
+				0C4E0A4B2444C4E4000ED248 /* Game2Cell.xib in Resources */,
 				0C674D68243A2C9500A00754 /* Assets.xcassets in Resources */,
 				0C24FD272443652E002C34C5 /* Game1ItemCell.xib in Resources */,
 				0C674D7F243A3E3800A00754 /* Game1VC.xib in Resources */,
@@ -218,8 +240,10 @@
 				0C674D7E243A3E3800A00754 /* Game1VC.swift in Sources */,
 				0C674D82243A3E8700A00754 /* Game2VC.swift in Sources */,
 				0C674D61243A2C9100A00754 /* AppDelegate.swift in Sources */,
+				0C4E0A4E2444CF6F000ED248 /* StartScreenVC.swift in Sources */,
 				0C4E0A46244462B8000ED248 /* SupportFile.swift in Sources */,
 				0C674D74243A2DA700A00754 /* HomeViewController.swift in Sources */,
+				0C4E0A4A2444C4E4000ED248 /* Game2Cell.swift in Sources */,
 				0C674D78243A321300A00754 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

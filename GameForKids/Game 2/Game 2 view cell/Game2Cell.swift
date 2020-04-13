@@ -1,39 +1,39 @@
 //
-//  Game1ItemCell.swift
+//  Game2Cell.swift
 //  GameForKids
 //
-//  Created by Lê Duy on 4/12/20.
+//  Created by Lê Duy on 4/13/20.
 //  Copyright © 2020 Lê Duy. All rights reserved.
 //
 
 import UIKit
 
-class Game1ItemCell: UICollectionViewCell {
+class Game2Cell: UICollectionViewCell {
     
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var inputTf: UITextField!
+    
     @IBOutlet weak var numberLb: UILabel!
     
+    @IBOutlet weak var inputLb: UITextField!
     var correctNumber = -1
     var checkAnswer:(() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code.
-        containerView.layer.borderColor = UIColor.lightGray.cgColor
-        containerView.layer.borderWidth = 0.5
+        // Initialization code
+        numberLb.isHidden = true
+        inputLb.isHidden = false
         
-        inputTf.layer.borderColor = UIColor(rgb: 0xE28D1C).cgColor
-        inputTf.layer.borderWidth = 4.5
-        inputTf.layer.cornerRadius = 10
+        inputLb.layer.borderColor = UIColor(rgb: 0xE28D1C).cgColor
+        inputLb.layer.borderWidth = 3.5
+        inputLb.layer.cornerRadius = 8
         
-        inputTf.delegate = self
+        inputLb.delegate = self
         setupTextFields()
     }
+
 }
 
-
-extension Game1ItemCell: UITextFieldDelegate {
+extension Game2Cell: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -46,16 +46,13 @@ extension Game1ItemCell: UITextFieldDelegate {
         
         toolbar.setItems([flexSpace, doneBtn], animated: false)
         toolbar.sizeToFit()
-        inputTf.inputAccessoryView = toolbar
+        inputLb.inputAccessoryView = toolbar
     }
-    
     @objc func doneButtonAction(){
         self.endEditing(true)
         if let checkAnswer = checkAnswer {
             checkAnswer()
         }
-    
+        
     }
-    
-    
 }
