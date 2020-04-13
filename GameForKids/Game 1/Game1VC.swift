@@ -11,6 +11,8 @@ import UIKit
 class Game1VC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var containerView: UIView!
     // Screen width.
     public var screenWidth: CGFloat {
         return UIScreen.main.bounds.width
@@ -24,6 +26,8 @@ class Game1VC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "Game1ItemCell", bundle: nil), forCellWithReuseIdentifier: "Game1ItemCell")
+        
+        containerView.layer.cornerRadius = 20
     }
 
     override func viewWillAppear(_ animated: Bool) {

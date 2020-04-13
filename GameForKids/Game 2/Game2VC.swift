@@ -9,12 +9,19 @@
 import UIKit
 
 class Game2VC: UIViewController {
+    
+    @IBOutlet weak var containerView: UIView!
+    
     @IBOutlet weak var backBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        initLayout()
+    }
+    
+    private func initLayout(){
+        containerView.layer.cornerRadius = 20
     }
     
     @IBAction func backBtnAction(_ sender: Any) {

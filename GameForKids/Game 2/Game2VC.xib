@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Game2VC" customModule="GameForKids" customModuleProvider="target">
             <connections>
                 <outlet property="backBtn" destination="ExB-8f-bJG" id="Rzj-Er-NPz"/>
+                <outlet property="containerView" destination="oYc-to-VZV" id="Nq9-u9-AgC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,24 +22,47 @@
             <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExB-8f-bJG">
-                    <rect key="frame" x="54" y="10" width="58" height="35"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <state key="normal" title="&lt; back">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="backBtnAction:" destination="-1" eventType="touchUpInside" id="yNe-EE-Xp5"/>
-                    </connections>
-                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundGame2" translatesAutoresizingMaskIntoConstraints="NO" id="SCG-Uv-ks0">
+                    <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYc-to-VZV">
+                    <rect key="frame" x="54" y="10" width="788" height="393"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExB-8f-bJG">
+                            <rect key="frame" x="8" y="8" width="58" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <state key="normal" title="&lt; back">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backBtnAction:" destination="-1" eventType="touchUpInside" id="yNe-EE-Xp5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ExB-8f-bJG" firstAttribute="leading" secondItem="akD-Mt-3Ew" secondAttribute="leading" constant="8" id="5sK-bR-mtK"/>
+                        <constraint firstItem="ExB-8f-bJG" firstAttribute="top" secondItem="akD-Mt-3Ew" secondAttribute="top" constant="8" id="APK-SZ-6mb"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="akD-Mt-3Ew"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="ExB-8f-bJG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="1X0-ah-n4o"/>
-                <constraint firstItem="ExB-8f-bJG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="i1Z-u9-NqO"/>
+                <constraint firstAttribute="trailing" secondItem="SCG-Uv-ks0" secondAttribute="trailing" id="0vQ-ef-WuN"/>
+                <constraint firstItem="oYc-to-VZV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="49h-Yw-Mkh"/>
+                <constraint firstAttribute="bottom" secondItem="SCG-Uv-ks0" secondAttribute="bottom" id="5Uf-yf-3MK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oYc-to-VZV" secondAttribute="bottom" constant="-10" id="7xX-W8-xwN"/>
+                <constraint firstItem="SCG-Uv-ks0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dlh-Oh-m5j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oYc-to-VZV" secondAttribute="trailing" constant="10" id="eNE-K9-HCP"/>
+                <constraint firstItem="oYc-to-VZV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="iZG-zz-LvS"/>
+                <constraint firstItem="SCG-Uv-ks0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="o5l-Az-fpI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="215" y="87"/>
+            <point key="canvasLocation" x="214.95535714285714" y="86.956521739130437"/>
         </view>
     </objects>
+    <resources>
+        <image name="backgroundGame2" width="502" height="238"/>
+    </resources>
 </document>
