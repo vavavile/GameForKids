@@ -43,8 +43,8 @@ extension Game1ItemCell: UITextFieldDelegate {
         let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: UIScreen.main.bounds.width, height: 30)))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneBtn = UIBarButtonItem(title: "Check answer", style: .done, target: self, action: #selector(doneButtonAction))
-        
-        toolbar.setItems([flexSpace, doneBtn], animated: false)
+        let cancelBtnx = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(cancelBtn))
+        toolbar.setItems([flexSpace,cancelBtnx, doneBtn], animated: false)
         toolbar.sizeToFit()
         inputTf.inputAccessoryView = toolbar
     }
@@ -57,5 +57,7 @@ extension Game1ItemCell: UITextFieldDelegate {
     
     }
     
-    
+    @objc func cancelBtn(){
+        self.endEditing(true)
+    }
 }

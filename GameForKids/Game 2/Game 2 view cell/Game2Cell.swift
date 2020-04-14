@@ -44,7 +44,9 @@ extension Game2Cell: UITextFieldDelegate {
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneBtn = UIBarButtonItem(title: "Check answer", style: .done, target: self, action: #selector(doneButtonAction))
         
-        toolbar.setItems([flexSpace, doneBtn], animated: false)
+        let cancelBtnx = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(cancelBtn))
+        
+        toolbar.setItems([flexSpace,cancelBtnx , doneBtn], animated: false)
         toolbar.sizeToFit()
         inputLb.inputAccessoryView = toolbar
     }
@@ -54,5 +56,9 @@ extension Game2Cell: UITextFieldDelegate {
             checkAnswer()
         }
         
+    }
+    
+    @objc func cancelBtn(){
+        self.endEditing(true)
     }
 }
