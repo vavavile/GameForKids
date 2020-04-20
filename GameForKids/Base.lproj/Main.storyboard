@@ -43,13 +43,26 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSx-6Q-HWU">
+                                <rect key="frame" x="232" y="44" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DhN-7f-uXj"/>
+                                    <constraint firstAttribute="width" constant="30" id="HIL-dC-zah"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="icons8-low-volume-40"/>
+                                <connections>
+                                    <action selector="volumnBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSp-1A-9gd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eux-53-MH3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FRX-G6-0XZ"/>
+                            <constraint firstItem="cSx-6Q-HWU" firstAttribute="centerY" secondItem="eux-53-MH3" secondAttribute="centerY" id="GPh-UC-yQb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PQX-Ez-02C" secondAttribute="trailing" id="HwO-ro-SGq"/>
                             <constraint firstItem="PQX-Ez-02C" firstAttribute="top" secondItem="eux-53-MH3" secondAttribute="bottom" constant="5" id="Jnb-5I-FxN"/>
                             <constraint firstItem="PQX-Ez-02C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PNq-cc-KiQ"/>
+                            <constraint firstItem="eux-53-MH3" firstAttribute="leading" secondItem="cSx-6Q-HWU" secondAttribute="trailing" constant="8.5" id="SlA-Xc-FAR"/>
                             <constraint firstAttribute="bottom" secondItem="PQX-Ez-02C" secondAttribute="bottom" id="a4v-nc-zmQ"/>
                             <constraint firstItem="eux-53-MH3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fE4-Bo-6XS"/>
                         </constraints>
@@ -84,4 +97,7 @@
             <point key="canvasLocation" x="242" y="-46"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-low-volume-40" width="20" height="20"/>
+    </resources>
 </document>

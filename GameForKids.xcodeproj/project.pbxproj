@@ -25,6 +25,8 @@
 		0C674D7F243A3E3800A00754 /* Game1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C674D7D243A3E3800A00754 /* Game1VC.xib */; };
 		0C674D82243A3E8700A00754 /* Game2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C674D80243A3E8700A00754 /* Game2VC.swift */; };
 		0C674D83243A3E8700A00754 /* Game2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C674D81243A3E8700A00754 /* Game2VC.xib */; };
+		0CC4E116244DF5CD00A858F8 /* counting_forward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0CC4E114244DF5CD00A858F8 /* counting_forward.mp3 */; };
+		0CC4E117244DF5CD00A858F8 /* complete_chart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0CC4E115244DF5CD00A858F8 /* complete_chart.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		0C674D7D243A3E3800A00754 /* Game1VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Game1VC.xib; sourceTree = "<group>"; };
 		0C674D80243A3E8700A00754 /* Game2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2VC.swift; sourceTree = "<group>"; };
 		0C674D81243A3E8700A00754 /* Game2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Game2VC.xib; sourceTree = "<group>"; };
+		0CC4E114244DF5CD00A858F8 /* counting_forward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = counting_forward.mp3; sourceTree = "<group>"; };
+		0CC4E115244DF5CD00A858F8 /* complete_chart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = complete_chart.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		0C674D5F243A2C9100A00754 /* GameForKids */ = {
 			isa = PBXGroup;
 			children = (
+				0CC4E113244DF5C000A858F8 /* AudioFile */,
 				0C4E0A4424446298000ED248 /* SupportFile */,
 				0C674D7B243A3E1900A00754 /* Game 2 */,
 				0C674D7A243A3E0F00A00754 /* Game 1 */,
@@ -157,6 +162,15 @@
 				0C4E0A4D2444CF6F000ED248 /* StartScreenVC.xib */,
 			);
 			path = "Game 2";
+			sourceTree = "<group>";
+		};
+		0CC4E113244DF5C000A858F8 /* AudioFile */ = {
+			isa = PBXGroup;
+			children = (
+				0CC4E115244DF5CD00A858F8 /* complete_chart.mp3 */,
+				0CC4E114244DF5CD00A858F8 /* counting_forward.mp3 */,
+			);
+			path = AudioFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +234,8 @@
 				0C674D79243A321300A00754 /* ItemCell.xib in Resources */,
 				0C674D6B243A2C9500A00754 /* LaunchScreen.storyboard in Resources */,
 				0C4E0A4F2444CF6F000ED248 /* StartScreenVC.xib in Resources */,
+				0CC4E117244DF5CD00A858F8 /* complete_chart.mp3 in Resources */,
+				0CC4E116244DF5CD00A858F8 /* counting_forward.mp3 in Resources */,
 				0C4E0A4B2444C4E4000ED248 /* Game2Cell.xib in Resources */,
 				0C674D68243A2C9500A00754 /* Assets.xcassets in Resources */,
 				0C24FD272443652E002C34C5 /* Game1ItemCell.xib in Resources */,

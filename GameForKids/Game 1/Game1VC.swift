@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class Game1VC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
@@ -19,6 +20,7 @@ class Game1VC: UIViewController {
     }
     
     var point = 5
+    var player:AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,28 @@ class Game1VC: UIViewController {
     }
     override var prefersHomeIndicatorAutoHidden: Bool {
         return true
+    }
+    
+    
+    @IBAction func audioBtnAction(_ sender: Any) {
+        playSound(soundName: "complete_chart")
+        
+    }
+    
+    private func playSound(soundName:String?) {
+        guard let urt = Bundle.main.url(forResource: soundName!, withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            player = try AVAudioPlayer(contentsOf: urt, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let player = player else { return }
+            DispatchQueue.global().async {
+                player.play()
+            }
+        } catch let error {
+            print(error)
+        }
     }
 }
 
@@ -112,4 +136,6 @@ extension Game1VC: UICollectionViewDelegate, UICollectionViewDataSource,UICollec
             
         }
     }
+    
+    
 }

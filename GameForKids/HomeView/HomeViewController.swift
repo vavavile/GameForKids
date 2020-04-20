@@ -7,12 +7,14 @@
 //
 
 import UIKit
-
+import AVFoundation
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var itemCollectionView: UICollectionView!
     
     var games = [Game]()
+    var player: AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,7 +57,34 @@ class HomeViewController: UIViewController {
         
         games = [game1,game2]
     }
-
+    
+    
+    @IBAction func volumnBtnAction(_ sender: Any) {
+        playSound(soundName: "counting_forward")
+    }
+    
+    private func playSound(soundName:String?) {
+        guard let url = Bundle.main.url(forResource: soundName!, withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+            
+            guard let player = player else { return }
+            DispatchQueue.global().async {
+                player.play()
+            }
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 //MARK: - UIcollection view delegate and datasource
