@@ -19,7 +19,8 @@ class Game1VC: UIViewController {
         return UIScreen.main.bounds.width
     }
     
-    var point = 5
+    var level1 = [12, 34, 67, 26, 99]
+    var point = 0
     var player:AVAudioPlayer?
     
     override func viewDidLoad() {
@@ -75,28 +76,18 @@ extension Game1VC: UICollectionViewDelegate, UICollectionViewDataSource,UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Game1ItemCell", for: indexPath) as! Game1ItemCell
         let currentNumber = (indexPath.row + 1)
-        switch currentNumber {
-        case 12:
-            mysteriousNumber(cell: cell, hideInputTf: false, hideNumberLb: true, number: 12)
-            
-        case 34:
-            mysteriousNumber(cell: cell, hideInputTf: false, hideNumberLb: true, number: 34)
-            
-        case 67:
-            mysteriousNumber(cell: cell, hideInputTf: false, hideNumberLb: true, number: 67)
-        case 26:
-            mysteriousNumber(cell: cell, hideInputTf: false, hideNumberLb: true, number: 26)
-        case 99:
-            mysteriousNumber(cell: cell, hideInputTf: false, hideNumberLb: true, number: 99)
-        default:
+        if level1.contains(currentNumber) {
+            mysteriousNumber(cell: cell, hideInputTf: false, hideNumberLb: true, number: currentNumber)
+        }
+        else {
             mysteriousNumber(cell: cell, hideInputTf: true, hideNumberLb: false, number: -1)
-            cell.numberLb.text = "\(indexPath.row + 1)"
+            cell.numberLb.text = "\(currentNumber)"
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (screenWidth - 80)/12, height: 50)
+        return CGSize(width: collectionView.frame.width/10, height: 50)
     }
     
     func mysteriousNumber(cell: Game1ItemCell!,hideInputTf:Bool,hideNumberLb:Bool,number:Int){
@@ -123,8 +114,8 @@ extension Game1VC: UICollectionViewDelegate, UICollectionViewDataSource,UICollec
             } else {
                 cell.inputTf.textColor = UIColor.green
                 cell.inputTf.isEnabled = false
-                self.point -= 1
-                if self.point == 0 {
+                self.point += 1
+                if self.point == self.level1.count {
                     let alert = UIAlertController(title: "Congratulation !!?", message: "You had finished the game.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Bravo :)", style: .default, handler: { _ in
                         self.navigationController?.popViewController(animated: true)
