@@ -20,6 +20,7 @@ class Game1VC: UIViewController {
     }
     
     var level1 = [12, 34, 67, 26, 99]
+    var cleared = [Int]()
     var point = 0
     var player:AVAudioPlayer?
     
@@ -78,6 +79,16 @@ extension Game1VC: UICollectionViewDelegate, UICollectionViewDataSource,UICollec
         let currentNumber = (indexPath.row + 1)
         if level1.contains(currentNumber) {
             mysteriousNumber(cell: cell, hideInputTf: false, hideNumberLb: true, number: currentNumber)
+            if cleared.contains(currentNumber) {
+                cell.inputTf.text = "\(currentNumber)"
+                cell.inputTf.textColor = UIColor.green
+                cell.inputTf.isEnabled = false
+            }
+            else {
+                cell.inputTf.text = ""
+                cell.inputTf.textColor = UIColor.black
+                cell.inputTf.isEnabled = true
+            }
         }
         else {
             mysteriousNumber(cell: cell, hideInputTf: true, hideNumberLb: false, number: -1)
@@ -102,7 +113,7 @@ extension Game1VC: UICollectionViewDelegate, UICollectionViewDataSource,UICollec
                 let alert = UIAlertController(title: "The answer is not correct", message: "Try again!", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "Oh oke", style: .default, handler: nil))
-                cell.inputTf.textColor = UIColor.red
+                cell.inputTf.text = ""
                 
                 self.present(alert, animated: true)
             } else if text == "" {
@@ -115,6 +126,7 @@ extension Game1VC: UICollectionViewDelegate, UICollectionViewDataSource,UICollec
                 cell.inputTf.textColor = UIColor.green
                 cell.inputTf.isEnabled = false
                 self.point += 1
+                self.cleared.append(correctNum)
                 if self.point == self.level1.count {
                     let alert = UIAlertController(title: "Congratulation !!?", message: "You had finished the game.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Bravo :)", style: .default, handler: { _ in
